@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="sickSliderLogoV2.png">
+    <link rel="shortcut icon" type="image/png" sizes="96x96" href="sickSliderLogoV2.png">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="sickSliderLogoV2.png">
+    <!-- 00000000000000000000000000000000000000000 -->
+    <title>The Sick-Slider | Home Page</title>
+    <link rel="stylesheet" href="styleMain.css">
+</head>
+
+<body class="bodyArea">
+    <div class="blurred-wrapper sky-container">
+        <header class="main-header container">
+            <div class="logoBox">
+                <a href="index.html" class="logo">The&nbsp;<span class="logoSpan"> Sick-Slider</span></a>
+                <a href="index.html"><img class="logoImg" src="sickSliderLogoV2White.png" alt="logo image"></a>
+            </div>
+            <a href="#" class="btn sign-up" onclick="togglePopup()">About</a>
+            <!-- Modal code -->
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1 class="aboutHeader">About</h1>
+                    <p class="aboutPara">The Sick-Slider is a website to implement different slick carousel styles. The UI of this website is designed by me. The Theme of this website is "Sliding".
+                        <br> This website is Designed and Created by MANAV KAPILA and is licensed under MIT License.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ******************************** -->
+
+        </header>
+        <div class="skate">
+            <img src="skating.png" class="skatingImg">
+        </div>
+        <section class="hero container">
+            <div class="content-wrapper">
+                <h5 class="tagline">Slick Carousel Styles</h5>
+                <h1 class="title">Add Slick Carousels to your website by using <span>Carousel</span></h1>
+                <!-- <p class="message">Adding Carousels using CDNs makes website load slower. Make website load faster by using The Sick-Slider as each of the carousel is hard coded without including any CDN links.</p> -->
+                <a href="slickSingle.html" class="btn cta">Single Slide</a>
+                <a href="slickMulti.html" class="btn cta">Multi Slide</a>
+            </div>
+
+        </section>
+
+
+
+    </div>
+    <!-- JS CODE FOR MODAL -->
+    <script>
+        function togglePopup() {
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+    </script>
+    <!-- JS CODE ENDS HERE  -->
+</body>
+
+</html>

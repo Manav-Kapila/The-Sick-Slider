@@ -1,0 +1,427 @@
+        html,
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body.bodyArea {
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1920px !important;
+            height: 100%;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        body {
+            font-size: 1.6rem;
+            font-family: sans-serif;
+            color: #fff;
+        }
+        
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .blurred-wrapper {
+            background: #AA076B;
+            background: -webkit-linear-gradient(-45deg, #61045F, #AA076B, #1D2671, #C33764, #061161, #780206);
+            background: linear-gradient(-45deg, #61045F, #AA076B, #1D2671, #C33764, #061161, #780206);
+            background-size: 400% 400%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            animation: hue 10s infinite alternate;
+            height: 100%;
+        }
+        
+        .blurred-wrapper::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur(1rem);
+            z-index: -1;
+            transform: scale(1.15);
+        }
+        
+        @keyframes hue {
+            from {
+                filter: hue-rotate(0);
+            }
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        .main-header {
+            height: 12rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .logo {
+            font-size: 2.6rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .logoBox {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        
+        .logoImg {
+            max-width: 150px;
+            max-height: 50px;
+        }
+        
+        .logoSpan {
+            font-family: cursive;
+        }
+        
+        .btn {
+            padding: 1.5rem 4rem;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 10px;
+            transition: all 0.7s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: #fffefeb8;
+            color: black;
+            border: 2px solid black;
+        }
+        
+        .sign-up {
+            color: #fff;
+            background: #00000054;
+            margin-left: 20%;
+        }
+        
+        .hero {
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 10%;
+        }
+        
+        .content-wrapper {
+            max-width: 85%;
+            padding: 5% 0;
+        }
+        
+        h5.tagline {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: lighter;
+            margin-bottom: 1rem;
+            padding-bottom: 2rem;
+            -webkit-text-stroke: 0.1px black;
+            text-shadow: 2px 2px 10px black;
+        }
+        
+        .title {
+            font-size: 7rem;
+            margin-bottom: 2rem;
+            padding-bottom: 3rem;
+            -webkit-text-stroke: 0.1px black;
+            text-shadow: 2px 2px 10px black;
+        }
+        
+        .message {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            -webkit-text-stroke: 0.1px black;
+            text-shadow: 2px 2px 10px black;
+        }
+        
+        .cta {
+            background-color: #00000054;
+            color: #fff;
+        }
+        
+        .popup .overlay {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            display: none;
+        }
+        
+        .popup .content {
+            position: absolute;
+            top: 15%;
+            left: 25%;
+            box-sizing: border-box;
+            transform: translate(-50%, -50%) scale(0);
+            background: #fffffff0;
+            border-radius: 10px;
+            width: 60%;
+            height: 55%;
+            height: max-content;
+            padding: 6rem;
+            z-index: 2;
+            text-align: center;
+            color: black;
+        }
+        
+        .popup .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 2.5rem;
+            font-weight: bold;
+            font-size: 4rem;
+            background: gray;
+            padding: 0.25rem 1.5rem;
+            text-align: center;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .popup.active .overlay {
+            display: block;
+        }
+        
+        .popup.active .content {
+            transform: all 300ms ease-in-out;
+            transform: translate(0%, 0%) scale(1);
+        }
+        
+        .aboutHeader {
+            text-align: center;
+            font-weight: bolder;
+            padding: 2rem;
+            font-size: 35px;
+            text-decoration: double underline;
+            color: #6b6767;
+        }
+        
+        .aboutPara {
+            text-align: justify;
+            color: #675858;
+            padding: 1rem;
+            font-size: 20px;
+            word-spacing: 0.5em;
+            line-height: 1.5em;
+            padding: 10%;
+            padding-top: 5%;
+        }
+        
+        .skate {
+            z-index: -1;
+            left: -50%;
+            width: 100%;
+            padding-top: 5%;
+            padding-bottom: 0;
+        }
+        
+        .skatingImg {
+            animation: skatingAni 10s linear infinite, suspension 2s linear infinite;
+            transition: all 0.5s ease-in-out;
+            position: relative;
+            opacity: 1;
+        }
+        
+        @keyframes skatingAni {
+            0% {
+                left: -50%;
+            }
+            100% {
+                left: 110%;
+            }
+        }
+        
+        @keyframes suspension {
+            0% {
+                transform: translateY(-2%);
+            }
+            50% {
+                transform: translateY(4%);
+            }
+            100% {
+                transform: translateY(-2%);
+            }
+        }
+        /* RESPONSIVE STYLING */
+        
+        @media all and (max-width: 1200px) {
+            .main-header {
+                flex-direction: column;
+                padding-top: 5%;
+            }
+            .content-wrapper {
+                padding-left: 5%;
+                padding-top: 0;
+            }
+            .skate {
+                padding-top: 12%;
+            }
+            .skatingImg {
+                width: 40%;
+                height: auto;
+            }
+            .title {
+                font-size: 6rem;
+            }
+            .btn {
+                padding: 1.5rem 6rem;
+            }
+            .hero {
+                padding-top: 5%;
+                padding-bottom: 20%;
+            }
+            .sign-up {
+                margin-left: 0;
+            }
+        }
+        
+        @media all and (max-width: 995px) {
+            .hero {
+                padding-top: 0;
+                padding-bottom: 20%;
+            }
+            .skatingImg {
+                padding-top: 5%;
+            }
+        }
+        
+        @media all and (max-width: 840px) {
+            .main-header {
+                flex-direction: column;
+                padding-top: 5%;
+            }
+            .btn {
+                padding: 1.5rem 6rem;
+            }
+            .skate {
+                padding-top: 10%;
+            }
+            .skatingImg {
+                padding-top: 12%;
+                width: 50%;
+            }
+        }
+        
+        @media all and (max-width: 770px) {
+            .content-wrapper {
+                max-width: 95%;
+                margin-bottom: 2rem;
+                padding-bottom: 5%;
+            }
+            h5.tagline {
+                font-size: 1.6rem;
+                margin-top: 10%;
+            }
+            .main-header {
+                height: 5rem;
+            }
+            .title {
+                font-size: 3.2rem;
+            }
+            .message {
+                font-size: 1.75rem;
+            }
+            .btn {
+                padding: 1rem 6rem;
+                margin-bottom: 2%;
+            }
+            .btn.cta {
+                padding: 1rem 5rem;
+            }
+            .popup .content {
+                left: 12%;
+                border-radius: 10px;
+                width: 80vw;
+                height: 60vh;
+                padding: 5rem 1rem;
+            }
+            p.aboutPara {
+                font-size: 16px;
+                letter-spacing: 1px;
+                word-spacing: 0.5em;
+                padding: 5% 15%;
+            }
+            .hero {
+                align-items: center;
+            }
+        }
+        
+        @media all and (max-width: 600px) {
+            .skate {
+                padding-top: 20%;
+            }
+            .skatingImg {
+                padding-top: 10%;
+            }
+        }
+        
+        @media all and (max-width: 500px) {
+            .popup .content {
+                height: 70vh;
+            }
+        }
+        
+        @media all and (max-width: 450px) {
+            .popup .content {
+                height: 80vh;
+            }
+            .title {
+                font-size: 2rem;
+            }
+            p.aboutPara {
+                font-size: 10px;
+                letter-spacing: 1px;
+                word-spacing: 0;
+                padding: 5% 10%;
+            }
+            .skate {
+                padding-top: 30%;
+            }
+            .btn.cta {
+                padding: 1 rem 2.5rem;
+                font-size: 12px;
+            }
+            a.btn.sign-up {
+                margin: 2% 0;
+                padding: 0.51rem 5rem;
+            }
+        }
+        
+        @media all and (max-width: 300px) {
+            .popup .content {
+                height: 90vh;
+            }
+            .message {
+                font-size: 1.5rem;
+            }
+            .btn {
+                padding: 1rem 6rem;
+                font-size: 1rem;
+            }
+        }
